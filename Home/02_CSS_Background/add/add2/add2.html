@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+</head>
+    <style>
+        
+        /* делаю из body flex-контейнер с вертикальным расположением элементов, 
+        поэтому flex-direction: column */
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        /*1-й вложенный flex-контейнер - main, куда входит все, кроме footer
+        расположение горизонтальное flex-direction: row
+        свойство flex-grow (первое значение в flex) у main задаю равным 1, а у footer 0, 
+        чтобы "прижать" footer к низу */
+        main {
+            display: flex;
+            flex-direction: row;
+            flex: 1 0 auto;
+            background-color: rgb(238, 238, 238);
+        }
+
+        .navigation {
+            background-color: rgb(204, 204, 204);
+            width: 15em;
+            height: fit-content;
+        }
+        /* 2-й вложенный flex-контейнер - .article, куда входят два блока со статьями
+        расположение вертикальное flex-direction: column*/
+        .article {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .articleitem {
+            background-color: rgb(170, 170, 170); 
+            margin-bottom: .2em;
+        }
+
+        /* создаю класс для изображения, чтобы задать его расположение в статье
+        если без float, то только margin-м получилось*/
+        .image {
+           margin-left: 62em;  
+        }
+
+        footer {
+            background-color: rgb(204, 204, 204);
+            flex: 0 0 auto;
+        }
+
+    </style>
+<body>
+    <main>
+        <div class="navigation">
+            <h3>Блок навигации</h3>
+            Содержание навигации <br>
+            Содержание навигации <br>
+            Содержание навигации <br>   
+            Содержание навигации <br>
+            Содержание навигации <br>
+            Содержание навигации <br>   
+       </div>
+       
+       <div class="article">
+            <div class="articleitem">
+                <h3>Статья 1</h3>
+                Содержание статьи 1<br>
+                Содержание статьи 1<br>
+                Содержание статьи 1<br>
+                Содержание статьи 1<br>
+                Содержание статьи 1<br>  
+            </div>
+
+            <div class="articleitem">
+                <h3>Статья 2</h3>
+                Содержание статьи 2<br>
+                Содержание статьи 2<br>
+                Содержание статьи 2<br>
+                Содержание статьи 2<br>
+                Содержание статьи 2<br>
+                <img src="envelope.png" alt="envelope" class="image">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        Нижний блок. Подвал. 
+    </footer>
+</body>
+</html>

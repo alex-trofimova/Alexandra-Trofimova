@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive navigation_1</title>
+</head>
+<style>
+    * {box-sizing: border-box;}
+
+    ul {list-style: none;}
+
+    .menu {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .menu li {
+        position: relative; 
+    }
+
+    .submenu {
+        position: absolute;
+        
+        margin: 0;
+        padding: 0;
+        
+        /*реализация плавного появления:
+        чтобы использовать transition (точнее временную задержку в нем)
+        необходимо свойство с численным параметром, такое как opacity (прозрачность) 
+        начальное значение 0, а для hover - 1*/
+        opacity: 0;
+        visibility: hidden;
+        
+        transition: opacity .5s ease-in-out .5s; /*вот здесь как раз это свойство 
+                                                 указано с параметрами задержки*/
+    }
+
+    .menu a {
+        display:block;
+        background: rgb(230, 230, 230);
+        border: 1px solid grey;
+        width: 100px;
+        border-radius: 10px;
+        text-decoration: none;
+        text-align: left;
+        padding: 5px 5px;
+        color: rgb(100, 100, 100);
+    }
+
+    .menu a:hover {
+        color: white;
+        background:rgb(90, 90, 90)    
+    }
+
+    .menu li:hover .submenu {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @media (max-width: 607px) {
+        .menu {
+            flex-direction: column;
+        }
+        .submenu {
+            left: 15%;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+</style>
+<body>
+    
+    <h3>Navigation menu</h3>
+    <ul class="menu">
+        <li><a href="#">Понедельник</a>
+            <ul class="submenu">
+                <li><a href="#">Завтрак</a></li>
+                <li><a href="#">Обед</a></li>
+                <li><a href="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Вторник</a>
+            <ul class="submenu">
+                <li><a href="#">Завтрак</a></li>
+                <li><a href="#">Обед</a></li>
+                <li><a href="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Среда</a>
+            <ul class="submenu">
+                <li><a href="#">Завтрак</a></li>
+                <li><a href="#">Обед</a></li>
+                <li><a href="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Четверг</a>
+            <ul class="submenu">
+                <li><a href="#">Завтрак</a></li>
+                <li><a href="#">Обед</a></li>
+                <li><a href="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Пятница</a>
+            <ul class="submenu">
+                <li><a href="#">Завтрак</a></li>
+                <li><a href="#">Обед</a></li>
+                <li><a href="#">Ужин</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Суббота</a>
+            <ul class="submenu">
+                <li><a href="#">Завтрак</a></li>
+                <li><a href="#">Обед</a></li>
+                <li><a href="#">Ужин</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
