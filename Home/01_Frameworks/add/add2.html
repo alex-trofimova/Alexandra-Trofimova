@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation framework</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="grid-container">
+     <h3>HOW-TO: Программа на Python, Часть 2</h3>
+        <div class="grid-x grid-padding-x">
+            <div class="small-3 cell">
+                    <ul class="square">
+                        <li><a href="add1.html">Программа на Python — часть 1</a></li>
+                        <li><a href="add2.html">Программа на Python — часть 2</a></li>
+                        <li><a href="add3.html">Программа на Python — часть 3</a></li>   
+                    </ul>
+                    <h4 id="to_content">Содержание</h4>
+                    <h6>HOW-TO: Программа на Python, Часть 2</h6>
+                    <ul class="square">
+                        <li><a href="#lists">Списки</a></li>
+                        <li><a href="#comments">Комментарии</a></li>
+                    </ul>
+            </div>
+
+            <div class="small-9 cell">
+                <p>В прошлом уроке мы рассмотрели простую программу, которая использовала raw_input
+                    для получения ответа пользователя, простые типы переменных и простой цикл «<b>for</b>». В
+                    этом уроке мы рассмотрим ещё больше типов переменных и напишем ещё больше
+                    программ.</p>
+                    <h4 id="lists">Списки <a href="#to_content">К содержанию</a></h4>
+                    <p>
+                        Давайте рассмотрим другой тип переменных, который называется <em>списки</em>. В других
+                        языках программирования они называются <em>массивами</em>. Если мы обратимся к аналогии с
+                        коробками для обуви, то массив (список) представляет собой несколько склеенных друг с
+                        другом коробок с одинаковыми вещами. Например, в одной коробке лежат вилки, в
+                        другой — ножи, в третьей — ложки. Посмотрим на простой список— список месяцев. Мы
+                        запрограммируем его так:
+                    </p>
+                    <span class="code-inline">months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']</span>
+                    <p>
+                        Чтобы создать список, мы заключили все значения в квадратные скобки ( <strong>'['</strong> и 
+                        <strong>']'</strong> ). Мы назвали наш список '<em>months</em>'. Чтобы использовать список, 
+                        мы дадим команду print <strong>months[0]</strong> или <strong>months[1]</strong> 
+                        (которые выведут на экран '<em>Jan</em>' или '<em>Feb</em>'). Помните: счет начинается с нуля. 
+                        Чтобы найти длину списка, можно использовать такую функцию:
+                    </p>
+                    
+                    <span class="code-inline">print len(months)</span>
+                
+                    <p>которая вернёт 12.</p>
+                
+                    <p>Ещё один пример списков — категории в поваренной книге. Например...</p>
+                
+                    <span class="code-inline">categories = ['Main dish','Meat','Fish','Soup','Cookies']</span>
+                
+                    <p>
+                        Таким образом, в <strong>categories[0]</strong> хранится '<em>Main dish</em>', 
+                        а в <strong>categories[4]</strong> — '<em>Cookies</em>'. 
+                        Всё очень просто. Я уверен, вы сможете придумать много других примеров использования списков.
+                    </p>
+                
+                    <h4 id="comments">Комментарии <a href="#to_content">К содержанию</a></h4>
+                         
+                    <p>
+                        Далее, мы должны обсудить комментарии. Комментарии важны по нескольким причинам.
+                        Они не только говорят вам или другим людям, что вы пытаетесь делать, но и напомнят
+                        вам через полгода, что же вы хотели сделать. Когда вы будете писать много программ,
+                        комментарии станут важными. Также при их помощи вы заставите Python игнорировать
+                        какие-либо части кода. Чтобы закомментировать строку, поставьте перед ней знак '#'.
+                        Например:
+                    </p>
+                    <span class="code-inline">#</code></span>
+                    <p>Это комментарий. <br>
+                        Комментарии можно вставлять в любое место в строке, но помните, что Python 
+                     проигнорирует всё, что идёт после '#'.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
